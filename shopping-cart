@@ -1,0 +1,18 @@
+food = []
+prices = []
+total = 0
+
+while True:
+    food.append(input("enter the food item to purchase: "))
+    if food[len(food)- 1].lower() == "q":
+        print("input end")
+        break
+    else :
+        prices.append(float(input("Enter the price of food: ")))
+
+print("YOUR CART: ")
+for i in range (len(food)) :
+    print(f"{food[i-1]} : {prices[i-1]}")
+    total+=prices[i-1]
+
+print(total)
