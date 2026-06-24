@@ -35,12 +35,8 @@ while running:
     play_again=input("please enter y to continue and n to exit: ").lower()
     while play_again not in ("y", "n"):
         play_again=input("please enter y to continue and n to exit: ").lower()
-    if play_again == "y":
-        pass
-    elif play_again=="n":
+    if play_again=="n":
         running=False
-    else:
-        pass
 
 print(f"The Wins are : {Wins}")
 print(f"The Losses are : {losses}")
