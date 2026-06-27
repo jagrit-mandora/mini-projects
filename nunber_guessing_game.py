@@ -25,6 +25,10 @@ while is_running and guesses<10:
         elif guess == answer:
             print("CORRECT ANSWER")
             is_running=False
+        elif guess < answer:
+            print("CORRECT ANSWER IS HIGHER THAN GUESS")
+        elif guess > answer:
+            print("CORRECT ANSWER IS LOWER THAN GUESS")
         else:
             print("TRY AGAIN")
         guesses+=1
