@@ -3,9 +3,6 @@ import random
 def show_balance(balance):
     print(f"Balance : {balance}")
 
-def spin():
-    pass
-
 def main():
     balance=100
 
@@ -28,12 +25,18 @@ def main():
             elif start_program=="n":
                 start=False
                 running=False
+            elif start_program=="jack":
+                balance+=10000
+                print(f"CHEAT CODE ACTIVATE. NEW BALANCE: {balance}")
+                start=False
             else:
                 print("ENTER Y OR N")
 
         if running==False:
             print("THANKS FOR PLAYING THE GAME")
             break
+
+        print(f"THE MAX VALID BET IS : {balance/2}")
 
 
         bet_run=True
@@ -45,11 +48,11 @@ def main():
             except ValueError:
                 continue
             
-            if bet<0:
-                print("PLEASE ENTER A POSITIVE NUMBER")
+            if bet<=0:
+                print("PLEASE ENTER A NON ZERO POSITIVE NUMBER")
                 continue
             elif bet>(balance/2):
-                print("PLEASE INPUT VALID NUMBER: ")
+                print("INSUFFICIANT BALANCE FOR THIS BET ")
                 continue
             else:
                 bet_run=False
@@ -79,4 +82,5 @@ def main():
             print("BALANCE IS ZERO : GAME OVER")
             running=False
 
-main()
+if __name__=="__main__":
+    main()
