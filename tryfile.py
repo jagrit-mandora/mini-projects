@@ -40,8 +40,17 @@ string_1=input("enter string: ")
 string_2=list(string_1)
 print(string_2)
 '''
-print(ord(" "))
+'''print(ord(" "))
 
 step=input("enter the steps you want to shift the encryption: ")
 while not step.isdigit or not int(step)<24:
-    step=input("enter the steps(less than 24) you want to shift the encryption: ")
+    step=input("enter the steps(less than 24) you want to shift the encryption: ")'''
+
+import time
+loading="loading"
+
+for i in range(0,8):
+    #print(f"/r{loading}",end="",flush=True)
+    print(f"\r{loading}", end="", flush=True)
+    loading=loading+"."
+    time.sleep(1)
